@@ -3,12 +3,14 @@ const router = express.Router()
 
 const {
     getBooks,
-    getBook
+    getBook,
+    createBook
 } = require('../controllers/books.js')
 const { Router } = require('express')
 
-router.route('/').get(getBooks)
+router.route('/').get(getBooks).post(createBook)
 router.route('/:id').get(getBook)
+
 
 
 module.exports = router

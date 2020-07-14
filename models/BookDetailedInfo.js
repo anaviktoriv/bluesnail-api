@@ -49,10 +49,12 @@ preview_imgs: {
 type: [String],
 required: [true, 'Please add a preview img'],
 validate: [arrayLimit, '{PATH} exceeds the limit of 3']
+},
+book_content: {
+type: mongoose.Schema.ObjectId,
+ref: 'BookContents',
+required: true
 }
-
-//TODO: Add the object id
-//book_content: 
 })
 
 //function to limit the length of an array

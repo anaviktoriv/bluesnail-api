@@ -16,6 +16,9 @@ dotenv.config({
 connectDB()
 
 const app = express()
+//body parser
+app.use(express.json())
+
 const PORT = process.env.PORT || 5000
 // Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
